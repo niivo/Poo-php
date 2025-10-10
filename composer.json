@@ -1,0 +1,11 @@
+{
+    "name": "admin/aulacom",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Admin\\Aulacom\\": "src/"
+        }
+    },
+    "require": {}
+}
