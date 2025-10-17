@@ -1,16 +1,19 @@
 <?php
 //includes
 include_once(__DIR__ . "/../model/Aluno.php");
-include_once(__DIR__ . "/../model/Curso.php.php");
+include_once(__DIR__ . "/../model/Curso.php");
 
 //receber os valores da requisição get (url)
 $alunoNome = $_GET['alnome'];
+$numMatri = $_GET['matri'];
 $alunoCurso = $_GET['curso'];
 
 if ($alunoNome == null){
-    echo "Nome do aluno: Null";
+    echo "Cadastro de aluno: Null";
 }else{
-    echo "Nome do aluno: {$alunoNome}";
+    echo "Cadastro do aluno: \n
+    Nome do Aluno: {$alunoNome} \n
+    Matricula: {$numMatri} \n";
 }
 
 if ($alunoCurso == null){
@@ -21,5 +24,5 @@ if ($alunoCurso == null){
 
 //intanciar
 
-$LoucoAbreu = new Aluno($alunoNome);
+$LoucoAbreu = new Aluno($alunoNome, $numMatri);
 $DS = new Curso($alunoCurso);
